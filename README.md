@@ -1,11 +1,12 @@
-# Mo Trading Automation Framework
+# DriverFactory Automation Framework
 
-A comprehensive test automation framework supporting both web and mobile testing with BDD Cucumber and TestNg approach.
+A unified test automation framework that supports both web and mobile testing, enabling execution with BDD (Cucumber) and TestNG approaches. It leverages a single driver class for Android, iOS, Chrome, Firefox, and Edge, with a configurable switching mechanism via the config.properties file.
 
 ## 🚀 Features
 
 - **Multi-Platform Testing**: Web (Chrome, Firefox, Edge) and Android mobile testing
 - **BDD Framework**: Cucumber integration with Gherkin feature files
+- **TestNg Framework**: TestNg intefration with annotations to control test case execution flow efficiently and Test suite execution.
 - **Page Object Model**: Modular design with reusable page objects
 - **Advanced Reporting**: ExtentReports with HTML output and TestNG integration
 - **Data-Driven Testing**: Excel integration with Apache POI
@@ -20,6 +21,8 @@ A comprehensive test automation framework supporting both web and mobile testing
 - **Appium Server** (for mobile testing)
 - **Web Browsers**: Chrome, Firefox, Edge
 - **Android device** with USB debugging enabled
+- **IOS device** with USB debugging enabled
+
 
 ## 🛠️ Installation
 

@@ -123,6 +123,37 @@ public class DriverFactory {
 		Thread.sleep(5000);
 	}
 
+	// ---------------- Browser stack ----------------
+	private static void initBrowserStack() throws Exception {
+		System.out.println("Initializing BrowserStack...");
+
+		UiAutomator2Options capabilities = new UiAutomator2Options();
+
+		HashMap<String, Object> bstackOptions = new HashMap<>();
+		bstackOptions.put("userName", Commons.getGlobalPropertiesValue("bstackUser"));
+		bstackOptions.put("accessKey", Commons.getGlobalPropertiesValue("bstackKey"));
+		bstackOptions.put("appiumVersion", "2.0.1");
+		bstackOptions.put("debug", "true");
+		bstackOptions.put("interactiveDebugging", "true");
+		// you can also add build name, project name, session name here
+		// bstackOptions.put("buildName",
+		// Commons.getGlobalPropertiesValue("buildName"));
+
+		capabilities.setCapability("platformName", "android");
+		capabilities.setCapability("appium:platformVersion", "14.0");
+		capabilities.setCapability("appium:deviceName", "Google Pixel 8 Pro");
+		capabilities.setCapability("appium:app", Commons.getGlobalPropertiesValue("bstackApp"));
+		capabilities.setCapability("appium:automationName", "UIAutomator2");
+		capabilities.setCapability("autoGrantPermissions", true);
+		capabilities.setCapability("bstack:options", bstackOptions);
+
+		AndroidDriver driver = new AndroidDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), capabilities);
+
+		addDriver(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		Thread.sleep(500);
+	}
+
 	// ---------------- WEB ----------------
 	private static void initChrome() throws IOException {
 		System.out.println("Launching Chrome...");
@@ -152,36 +183,6 @@ public class DriverFactory {
 		edgeDriver.get(Commons.getGlobalPropertiesValue("url"));
 		edgeDriver.manage().window().maximize();
 		edgeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-	}
-
-	private static void initBrowserStack() throws Exception {
-		System.out.println("Initializing BrowserStack...");
-
-		UiAutomator2Options capabilities = new UiAutomator2Options();
-
-		HashMap<String, Object> bstackOptions = new HashMap<>();
-		bstackOptions.put("userName", Commons.getGlobalPropertiesValue("bstackUser"));
-		bstackOptions.put("accessKey", Commons.getGlobalPropertiesValue("bstackKey"));
-		bstackOptions.put("appiumVersion", "2.0.1");
-		bstackOptions.put("debug", "true");
-		bstackOptions.put("interactiveDebugging", "true");
-		// you can also add build name, project name, session name here
-		// bstackOptions.put("buildName",
-		// Commons.getGlobalPropertiesValue("buildName"));
-
-		capabilities.setCapability("platformName", "android");
-		capabilities.setCapability("appium:platformVersion", "14.0");
-		capabilities.setCapability("appium:deviceName", "Google Pixel 8 Pro");
-		capabilities.setCapability("appium:app", Commons.getGlobalPropertiesValue("bstackApp"));
-		capabilities.setCapability("appium:automationName", "UIAutomator2");
-		capabilities.setCapability("autoGrantPermissions", true);
-		capabilities.setCapability("bstack:options", bstackOptions);
-
-		AndroidDriver driver = new AndroidDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), capabilities);
-
-		addDriver(driver);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		Thread.sleep(500);
 	}
 
 }
