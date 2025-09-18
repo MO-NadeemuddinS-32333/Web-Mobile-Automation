@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="stepDefs.GetQSD">
+      <class name="nadeem.demotest">
         <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="1"/>
+          <include name="sampletest"/>
+          <include name="launchapp"/>
         </methods>
-      </class> <!-- stepDefs.GetQSD -->
+      </class> <!-- nadeem.demotest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

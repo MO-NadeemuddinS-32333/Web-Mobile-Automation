@@ -1,6 +1,5 @@
 package stepDefs;
 
-import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,20 +11,50 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.HomePage;
+import pageobjects.LoginPage;
+import utils.Commons;
 
 public class GetSD {
 	HomePage homepage;
 
 	@Given("Application is launch")
-	public void application_is_launch() throws IOException, InterruptedException {
+	public void application_is_launch() throws Exception {
 		DriverFactory.initDriver();
 		DriverFactory.getDriver().manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(20));
 	}
 
 	@Given("user login")
 	public void user_login() throws InterruptedException {
-		System.out.println("Biometric login");
-		Thread.sleep(5000);
+		LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
+		try {
+			if (loginpage.loginButton.isDisplayed()) {
+
+				loginpage.loginButton.click();
+				Thread.sleep(1000);
+				loginpage.userID.click();
+				loginpage.userID.sendKeys(Commons.getGlobalPropertiesValue("userId"));
+				((AndroidDriver) drivers.DriverFactory.getDriver()).hideKeyboard();
+				loginpage.nextbutton.click();
+				Thread.sleep(3000);
+				loginpage.passwordTextField.click();
+				loginpage.passwordTextField.sendKeys(Commons.getGlobalPropertiesValue("password"));
+				((AndroidDriver) drivers.DriverFactory.getDriver()).hideKeyboard();
+				loginpage.loginButton.click();
+				Thread.sleep(5000);
+				loginpage.dobTextField.get(0).click();
+				loginpage.dobTextField.get(0).sendKeys(Commons.getGlobalPropertiesValue("dob"));
+				((AndroidDriver) drivers.DriverFactory.getDriver()).hideKeyboard();
+				loginpage.confirmDobButton.click();
+				Thread.sleep(3000);
+				loginpage.exploreTheAppButton.click();
+				Thread.sleep(5000);
+				loginpage.iUnderstandRddButton.click();
+				Thread.sleep(3000);
+
+			}
+		} catch (Exception biometricLoginException) {
+			System.out.println("Login failed");
+		}
 	}
 
 	@When("user clicks on global search")
@@ -87,6 +116,11 @@ public class GetSD {
 	@Then("order book updated")
 	public void order_book_updated() {
 		System.out.println("This is Login");
+	}
+
+	@Then("close application")
+	public void close_application() {
+		drivers.DriverFactory.quitDriver();
 	}
 
 }

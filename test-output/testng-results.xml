@@ -1,63 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-18T13:08:20 IST" name="Default suite" finished-at="2025-09-18T13:10:32 IST" duration-ms="131695">
+  <suite started-at="2025-09-18T15:59:39 IST" name="Default suite" finished-at="2025-09-18T15:59:59 IST" duration-ms="20674">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepDefs.GetQSD@58ea606c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-09-18T13:08:20 IST" name="Default test" finished-at="2025-09-18T13:10:32 IST" duration-ms="131695">
-      <class name="stepDefs.GetQSD">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:stepDefs.GetQSD@58ea606c]" started-at="2025-09-18T13:08:20 IST" name="setUpClass" finished-at="2025-09-18T13:08:21 IST" duration-ms="712" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@526b2f3e]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-09-18T15:59:39 IST" name="Default test" finished-at="2025-09-18T15:59:59 IST" duration-ms="20674">
+      <class name="nadeem.demotest">
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:nadeem.demotest@63475ace]" started-at="2025-09-18T15:59:39 IST" name="launchapp" finished-at="2025-09-18T15:59:59 IST" duration-ms="20630" status="FAIL">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MOT-32333-L', ip: '192.168.208.205']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MOT-32333-L', ip: '192.168.208.205'
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:163)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:156)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:151)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:132)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:127)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:112)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:102)
+at drivers.DriverFactory.initFirefox(DriverFactory.java:140)
+at drivers.DriverFactory.initDriver(DriverFactory.java:76)
+at nadeem.demotest.launchapp(demotest.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+at org.testng.TestRunner.beforeRun(TestRunner.java:644)
+at org.testng.TestRunner.run(TestRunner.java:610)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver process to start.
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:209)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+... 35 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepDefs.GetQSD@58ea606c]" started-at="2025-09-18T13:08:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T13:10:03 IST" duration-ms="102286" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["sanity test of application"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Launch and login app"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- launchapp -->
+        <test-method signature="sampletest()[pri:0, instance:nadeem.demotest@63475ace]" started-at="2025-09-18T15:59:59 IST" name="sampletest" finished-at="2025-09-18T15:59:59 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MOT-32333-L', ip: '192.168.208.205']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'MOT-32333-L', ip: '192.168.208.205'
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:163)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:156)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:151)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:132)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:127)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:112)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:102)
+at drivers.DriverFactory.initFirefox(DriverFactory.java:140)
+at drivers.DriverFactory.initDriver(DriverFactory.java:76)
+at nadeem.demotest.launchapp(demotest.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+at org.testng.TestRunner.beforeRun(TestRunner.java:644)
+at org.testng.TestRunner.run(TestRunner.java:610)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver process to start.
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:209)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+... 35 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepDefs.GetQSD@58ea606c]" started-at="2025-09-18T13:10:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-18T13:10:32 IST" duration-ms="28630" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Regression test of application"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Launch and login app"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:stepDefs.GetQSD@58ea606c]" started-at="2025-09-18T13:10:32 IST" name="tearDownClass" finished-at="2025-09-18T13:10:32 IST" duration-ms="22" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- stepDefs.GetQSD -->
+        </test-method> <!-- sampletest -->
+      </class> <!-- nadeem.demotest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -18,4 +18,5 @@ Feature: Launch and login app
     When price input
     And click on place order
     Then order book updated
+    And close application
    
