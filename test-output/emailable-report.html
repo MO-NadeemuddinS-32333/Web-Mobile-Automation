@@ -9,35 +9,49 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">20,674</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">123,352</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">nadeem.demotest</td><td><a href="#m0">launchapp</a></td><td rowspan="1">1758191379109</td><td rowspan="1">20630</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">nadeem.demotest</td><td><a href="#m1">sampletest</a></td><td rowspan="1">1758191399771</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">nadeem.demotest</td><td><a href="#m0">sampletest</a></td><td rowspan="1">1758278823710</td><td rowspan="1">66383</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">nadeem.demotest#launchapp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;MOT-32333-L&apos;, ip: &apos;192.168.208.205&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:156)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:151)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:132)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:127)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:112)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:102)
-	at drivers.DriverFactory.initFirefox(DriverFactory.java:140)
-	at drivers.DriverFactory.initDriver(DriverFactory.java:76)
-	at nadeem.demotest.launchapp(demotest.java:18)
+<h2>Default test</h2><h3 id="m0">nadeem.demotest#sampletest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Command: [1d75e004290a33dc9ec40c3bcbb554f9beca5ba2, findElement {using=xpath, value=//XCUIElementTypeStaticText[@name=&quot;Explore the app&quot;]}]
+Capabilities {appium:autoGrantPermissions: true, appium:automationName: xcuitest, appium:bootstrapPath: /usr/local/.browserstack/co..., appium:browserstack.isTargetBased: true, appium:bundleID: com.mosl.risebeta, appium:bundleId: com.MOSL.RiseBeta, appium:databaseEnabled: false, appium:deviceName: iphone 15, appium:deviceOrientation: PORTRAIT, appium:javascriptEnabled: true, appium:keychainPassword: [REDACTED VALUE], appium:keychainPath: [REDACTED VALUE], appium:locationContextEnabled: false, appium:networkConnectionEnabled: false, appium:newCommandTimeout: 0, appium:noReset: true, appium:orientation: PORTRAIT, appium:realMobile: true, appium:safariIgnoreFraudWarning: true, appium:safariInitialUrl: http://mobile-internet-chec..., appium:takesScreenshot: true, appium:udid: 00008120-0008058C0AD8A01E, appium:useXctestrunFile: true, appium:waitForQuiescence: false, appium:wdaStartupRetries: 3, appium:webStorageEnabled: false, appium:webkitResponseTimeout: 20000, platformName: IOS}
+Session ID: 1d75e004290a33dc9ec40c3bcbb554f9beca5ba2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at nadeem.demotest.sampletest(demotest.java:67)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:644)
-	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
@@ -51,61 +65,6 @@ Host info: host: &apos;MOT-32333-L&apos;, ip: &apos;192.168.208.205&apos;
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver process to start.
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:209)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	... 35 more
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">nadeem.demotest#sampletest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;MOT-32333-L&apos;, ip: &apos;192.168.208.205&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:156)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:151)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:132)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:127)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:112)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:102)
-	at drivers.DriverFactory.initFirefox(DriverFactory.java:140)
-	at drivers.DriverFactory.initDriver(DriverFactory.java:76)
-	at nadeem.demotest.launchapp(demotest.java:18)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:644)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.WebDriverException: Timed out waiting for driver process to start.
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:209)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	... 35 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

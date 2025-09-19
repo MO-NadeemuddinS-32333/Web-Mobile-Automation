@@ -1,5 +1,6 @@
 package nadeem;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
@@ -21,7 +22,52 @@ public class demotest {
 
 	@Test
 	public void sampletest() throws InterruptedException {
-		Thread.sleep(15000);
+		System.out.println("app started");
+		WebDriver driver = DriverFactory.getDriver();
+
+		try {
+			driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Allow\"]")).click();
+		} catch (Exception e) {
+			System.out.println("Location popup not displayed");
+		}
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Login\"]")).click();
+		driver.findElement(By.xpath("//XCUIElementTypeImage[@name=\"Login using Password\"]")).click();
+		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Proceed\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"Enter Mobile No. or Client ID or Email\"]"))
+				.click();
+		driver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"Enter Mobile No. or Client ID or Email\"]"))
+				.sendKeys("Y05120");
+		try {
+			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='Done']")).click();
+		} catch (Exception e) {
+			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='Return']")).click();
+		}
+		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Next\"]")).click();
+		Thread.sleep(2000);
+		// driver.findElement(By.xpath("//XCUIElementTypeOther[@name=\"Enter Your
+		// Password\"]")).click();
+		driver.findElement(By.xpath("//XCUIElementTypeOther[@name=\"Enter Your Password\"]")).sendKeys("abc@123");
+		// driver.navigate().back();
+		try {
+			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='Done']")).click();
+		} catch (Exception e) {
+			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='Return']")).click();
+		}
+
+		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Next\"]")).click();
+		Thread.sleep(2000);
+		// driver.findElement(By.xpath("//XCUIElementTypeOther[@name=\"DD/MM/YYYY\"]")).click();
+		driver.findElement(By.xpath("//XCUIElementTypeOther[@name=\"DD/MM/YYYY\"]")).sendKeys("18051995 ");
+		driver.navigate().back();
+		// ((IOSDriver) DriverFactory.getDriver()).hideKeyboard();
+		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Next\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Explore the app\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"Options\"]")).click();
+		System.out.println("test completed");
 
 	}
 

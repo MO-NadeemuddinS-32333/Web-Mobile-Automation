@@ -78,8 +78,11 @@ public class DriverFactory {
 		case "edge":
 			initEdge();
 			break;
-		case "browserstack":
-			initBrowserStack();
+		case "browserstackios":
+			initBrowserStackIos();
+			break;
+		case "browserstackandroid":
+			initBrowserStackandroid();
 			break;
 		default:
 			throw new RuntimeException("Unsupported platform in config: " + platform);
@@ -124,7 +127,36 @@ public class DriverFactory {
 	}
 
 	// ---------------- Browser stack ----------------
-	private static void initBrowserStack() throws Exception {
+	private static void initBrowserStackIos() throws Exception {
+		System.out.println("Initializing BrowserStack...");
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+
+		HashMap<String, Object> bstackOptions = new HashMap<>();
+		bstackOptions.put("userName", Commons.getGlobalPropertiesValue("bstackUser"));
+		bstackOptions.put("accessKey", Commons.getGlobalPropertiesValue("bstackKey"));
+		bstackOptions.put("appiumVersion", "2.0.1");
+		bstackOptions.put("debug", "true");
+		bstackOptions.put("interactiveDebugging", "true");
+		// you can also add build name, project name, session name here
+		// bstackOptions.put("buildName",
+		// Commons.getGlobalPropertiesValue("buildName"));
+		capabilities.setCapability("platformName", "iOS");
+		capabilities.setCapability("appium:platformVersion", "17.0");
+		capabilities.setCapability("appium:deviceName", "iPhone 15");
+		capabilities.setCapability("appium:app", Commons.getGlobalPropertiesValue("bstackApp"));
+		capabilities.setCapability("appium:automationName", "XCUITest");
+		capabilities.setCapability("autoGrantPermissions", true);
+		capabilities.setCapability("bstack:options", bstackOptions);
+
+		IOSDriver driver = new IOSDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), capabilities);
+
+		addDriver(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		Thread.sleep(500);
+	}
+
+	private static void initBrowserStackandroid() throws Exception {
 		System.out.println("Initializing BrowserStack...");
 
 		UiAutomator2Options capabilities = new UiAutomator2Options();
