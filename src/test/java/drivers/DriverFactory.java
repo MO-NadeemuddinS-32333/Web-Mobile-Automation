@@ -147,6 +147,7 @@ public class DriverFactory {
 		capabilities.setCapability("appium:app", Commons.getGlobalPropertiesValue("bstackApp"));
 		capabilities.setCapability("appium:automationName", "XCUITest");
 		capabilities.setCapability("autoGrantPermissions", true);
+		capabilities.setCapability("browserstack.networkLogs", true);
 		capabilities.setCapability("bstack:options", bstackOptions);
 
 		IOSDriver driver = new IOSDriver(new URL("https://hub-cloud.browserstack.com/wd/hub"), capabilities);
@@ -176,6 +177,7 @@ public class DriverFactory {
 		capabilities.setCapability("appium:deviceName", "Google Pixel 8 Pro");
 		capabilities.setCapability("appium:app", Commons.getGlobalPropertiesValue("bstackApp"));
 		capabilities.setCapability("appium:automationName", "UIAutomator2");
+		capabilities.setCapability("browserstack.networkLogs", true);
 		capabilities.setCapability("autoGrantPermissions", true);
 		capabilities.setCapability("bstack:options", bstackOptions);
 

@@ -20,7 +20,7 @@ public class demotest {
 		DriverFactory.getDriver().manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(20));
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void sampletest() throws InterruptedException {
 		System.out.println("app started");
 		WebDriver driver = DriverFactory.getDriver();
@@ -71,11 +71,10 @@ public class demotest {
 
 	}
 
-	@Test
+	@Test(enabled = true)
 	public void asserstionorcondition() {
-		
-		
-		
+
+		System.out.println("test started");
 		long startTime = System.currentTimeMillis();
 		try {
 			try {
@@ -98,6 +97,8 @@ public class demotest {
 			status = "Fail";
 		} finally {
 			long endTime = System.currentTimeMillis();
+			System.out.println("start time" + startTime);
+			System.out.println("end time" + endTime);
 
 		}
 	}

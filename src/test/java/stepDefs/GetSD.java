@@ -2,9 +2,11 @@ package stepDefs;
 
 import java.time.Duration;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import drivers.AppiumServerManager;
 import drivers.DriverFactory;
 import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.en.Given;
@@ -12,13 +14,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.HomePage;
 import pageobjects.LoginPage;
-import utils.Commons;
 
-public class GetSD {
+public class GetSD extends AppiumServerManager {
+	WebDriver driver;
 	HomePage homepage;
 
 	@Given("Application is launch")
 	public void application_is_launch() throws Exception {
+		startServer();
 		DriverFactory.initDriver();
 		DriverFactory.getDriver().manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(20));
 	}
@@ -32,18 +35,18 @@ public class GetSD {
 				loginpage.loginButton.click();
 				Thread.sleep(1000);
 				loginpage.userID.click();
-				loginpage.userID.sendKeys(Commons.getGlobalPropertiesValue("userId"));
-				((AndroidDriver) drivers.DriverFactory.getDriver()).hideKeyboard();
+				loginpage.userID.sendKeys("Y05120");
+				hideKeyboard(driver);
 				loginpage.nextbutton.click();
 				Thread.sleep(3000);
 				loginpage.passwordTextField.click();
-				loginpage.passwordTextField.sendKeys(Commons.getGlobalPropertiesValue("password"));
-				((AndroidDriver) drivers.DriverFactory.getDriver()).hideKeyboard();
+				loginpage.passwordTextField.sendKeys("Mofsl@321");
+				hideKeyboard(driver);
 				loginpage.loginButton.click();
 				Thread.sleep(5000);
 				loginpage.dobTextField.get(0).click();
-				loginpage.dobTextField.get(0).sendKeys(Commons.getGlobalPropertiesValue("dob"));
-				((AndroidDriver) drivers.DriverFactory.getDriver()).hideKeyboard();
+				loginpage.dobTextField.get(0).sendKeys("18052005 ");
+				hideKeyboard(driver);
 				loginpage.confirmDobButton.click();
 				Thread.sleep(3000);
 				loginpage.exploreTheAppButton.click();
@@ -86,7 +89,7 @@ public class GetSD {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		((AndroidDriver) drivers.DriverFactory.getDriver()).hideKeyboard();
+		hideKeyboard(driver);
 		drivers.DriverFactory.getDriver().navigate().back();
 	}
 
@@ -121,6 +124,15 @@ public class GetSD {
 	@Then("close application")
 	public void close_application() {
 		drivers.DriverFactory.quitDriver();
+		stopServer();
+	}
+
+	public static void hideKeyboard(WebDriver driver) {
+		try {
+			((AndroidDriver) driver).hideKeyboard();
+		} catch (Exception e) {
+			System.out.println("Keyboard not present");
+		}
 	}
 
 }
