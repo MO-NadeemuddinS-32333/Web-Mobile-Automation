@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="nadeem.demotest">
+      <class name="nadeem.serverdrivertest">
         <methods>
-          <include name="sampletest"/>
-          <include name="launchapp"/>
+          <include name="f"/>
+          <include name="driverserversetup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- nadeem.demotest -->
+      </class> <!-- nadeem.serverdrivertest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
