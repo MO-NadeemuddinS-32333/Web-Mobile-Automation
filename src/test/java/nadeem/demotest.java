@@ -71,4 +71,35 @@ public class demotest {
 
 	}
 
+	@Test
+	public void asserstionorcondition() {
+		
+		
+		
+		long startTime = System.currentTimeMillis();
+		try {
+			try {
+				// asserstion 1
+			} catch (Exception e) {
+				System.out.println("Assertion 1 failed");
+			}
+			try {
+				// asserstion 2
+			} catch (Exception e) {
+				System.out.println("Assertion 2 failed");
+			}
+			try {
+				// asserstion 3
+			} catch (Exception e) {
+				System.out.println("Assertion 3 failed");
+			}
+			status = "Pass";
+		} catch (Exception e) {
+			status = "Fail";
+		} finally {
+			long endTime = System.currentTimeMillis();
+
+		}
+	}
+
 }
