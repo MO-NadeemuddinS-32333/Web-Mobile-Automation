@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="MoTradingAutomationSuite">
+ 
+    <listeners>
+        <listener class-name="utils.Listners"/>
+    </listeners>
+
     <test name="MoTradingTests">
         <classes>
-            <class name="nadeem.demotest"/>
             <class name="nadeem.serverdrivertest"/>
         </classes>
     </test>
+
 </suite>

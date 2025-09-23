@@ -2,17 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MoTradingAutomationSuite]">
   <listeners>
-    <listener class-name="utils.ExtentTestListener"/>
+    <listener class-name="utils.Listners"/>
   </listeners>
   <test thread-count="5" name="MoTradingTests(failed)">
     <classes>
-      <class name="nadeem.demotest">
+      <class name="nadeem.serverdrivertest">
         <methods>
-          <include name="launchapp"/>
-          <include name="tearDown"/>
-          <include name="testWithExtentReporting"/>
+          <include name="skippedtestmethod"/>
+          <include name="failedtestmethod"/>
+          <include name="driverserversetup"/>
+          <include name="teardown"/>
+          <include name="passtestmethod"/>
         </methods>
-      </class> <!-- nadeem.demotest -->
+      </class> <!-- nadeem.serverdrivertest -->
     </classes>
   </test> <!-- MoTradingTests(failed) -->
 </suite> <!-- Failed suite [MoTradingAutomationSuite] -->

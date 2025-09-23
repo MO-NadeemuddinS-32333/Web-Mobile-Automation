@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="nadeem.ExtentReportDemo">
+      <class name="nadeem.serverdrivertest">
         <methods>
-          <include name="testPassingScenario"/>
-          <include name="testWithMultipleSteps"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="skippedtestmethod"/>
+          <include name="failedtestmethod"/>
+          <include name="driverserversetup"/>
+          <include name="teardown"/>
+          <include name="passtestmethod"/>
         </methods>
-      </class> <!-- nadeem.ExtentReportDemo -->
+      </class> <!-- nadeem.serverdrivertest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
