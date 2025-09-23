@@ -59,10 +59,8 @@ public class DriverFactory {
 		}
 	}
 
-	public static void initDriver() throws Exception {
-		String platform = Commons.getGlobalPropertiesValue("platform");
-
-		switch (platform.toLowerCase()) {
+	public static void initDriver(String platformType) throws Exception {
+		switch (platformType.toLowerCase()) {
 		case "android":
 			initAndroid();
 			break;
@@ -85,8 +83,13 @@ public class DriverFactory {
 			initBrowserStackandroid();
 			break;
 		default:
-			throw new RuntimeException("Unsupported platform in config: " + platform);
+			throw new RuntimeException("Unsupported platform: " + platformType);
 		}
+	}
+
+	public static void initDriver() throws Exception {
+		String platform = Commons.getGlobalPropertiesValue("platform");
+		initDriver(platform);
 	}
 
 	// ---------------- MOBILE ----------------

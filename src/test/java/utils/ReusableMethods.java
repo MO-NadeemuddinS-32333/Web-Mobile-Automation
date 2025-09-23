@@ -152,30 +152,36 @@ public class ReusableMethods {
 		}
 	}
 
-	private static int rowCounter = 0;
+	// keep rowCounter separate per thread/class
+	private static ThreadLocal<Integer> rowCounter = ThreadLocal.withInitial(() -> 0);
+	private static ThreadLocal<StringBuilder> tableContent = ThreadLocal.withInitial(() -> new StringBuilder());
 
 	public static void logTableStart(String tableName) {
-		Reporter.log("<h3>" + tableName + "</h3>", true);
-		Reporter.log("<table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'>", true);
-		Reporter.log("<tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr>", true);
+		rowCounter.set(0);
+		tableContent.set(new StringBuilder());
+		tableContent.get().append("<h3>").append(tableName).append("</h3>");
+		tableContent.get().append("<table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'>");
+		tableContent.get().append("<tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr>");
 	}
 
 	public static void logTableRow(String testCase, String status, long timeTaken) {
-		rowCounter++;
+		int currentCount = rowCounter.get() + 1;
+		rowCounter.set(currentCount);
 		String statusColor = "";
 		String statusTextStyle = "color: white; font-weight: bold;";
-
 		if ("Fail".equalsIgnoreCase(status)) {
 			statusColor = "background-color: red;";
 		} else if ("Pass".equalsIgnoreCase(status)) {
 			statusColor = "background-color: green;";
 		}
-
-		Reporter.log("<tr><td>" + rowCounter + "</td><td>" + testCase + "</td><td style='" + statusColor
-				+ statusTextStyle + "'>" + status + "</td><td>" + timeTaken + "</td></tr>", true);
+		tableContent.get().append("<tr><td>").append(currentCount).append("</td><td>")
+			.append(testCase).append("</td><td style='").append(statusColor)
+			.append(statusTextStyle).append("'>").append(status)
+			.append("</td><td>").append(timeTaken).append("</td></tr>");
 	}
 
 	public static void logTableEnd() {
-		Reporter.log("</table>", true);
+		tableContent.get().append("</table>");
+		Reporter.log(tableContent.get().toString(), true);
 	}
 }

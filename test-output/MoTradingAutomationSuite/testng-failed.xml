@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [MoTradingAutomationSuite]">
+<suite thread-count="2" parallel="tests" name="Failed suite [MoTradingAutomationSuite]">
   <listeners>
     <listener class-name="utils.Listners"/>
   </listeners>
-  <test thread-count="5" name="MoTradingTests(failed)">
+  <test thread-count="2" parallel="tests" name="BrowserStackIOSTest(failed)">
     <classes>
-      <class name="nadeem.serverdrivertest">
+      <class name="nadeem.ios">
         <methods>
-          <include name="skippedtestmethod"/>
-          <include name="failedtestmethod"/>
-          <include name="driverserversetup"/>
-          <include name="teardown"/>
-          <include name="passtestmethod"/>
+          <include name="reportTableStart"/>
+          <include name="Ios"/>
+          <include name="beforeTest"/>
+          <include name="test1"/>
+          <include name="reportTableEnd"/>
+          <include name="test2"/>
         </methods>
-      </class> <!-- nadeem.serverdrivertest -->
+      </class> <!-- nadeem.ios -->
     </classes>
-  </test> <!-- MoTradingTests(failed) -->
+  </test> <!-- BrowserStackIOSTest(failed) -->
 </suite> <!-- Failed suite [MoTradingAutomationSuite] -->
