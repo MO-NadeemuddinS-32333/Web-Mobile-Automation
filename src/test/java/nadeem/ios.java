@@ -18,7 +18,7 @@ public class ios extends AppiumServerManager {
 
 	@BeforeTest
 	public void beforeTest() throws Exception {
-		DriverFactory.initDriver("browserstackios");
+		DriverFactory.initDriver("edge");
 		DriverFactory.getDriver();
 	}
 

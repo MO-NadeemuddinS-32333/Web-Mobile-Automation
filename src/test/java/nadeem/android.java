@@ -19,7 +19,7 @@ public class android extends AppiumServerManager {
 	@BeforeTest
 	public void launchandroid() {
 		try {
-			DriverFactory.initDriver("android");
+			DriverFactory.initDriver("chrome");
 			DriverFactory.getDriver();
 			System.out.println("Android driver initialized successfully");
 		} catch (Exception e) {
