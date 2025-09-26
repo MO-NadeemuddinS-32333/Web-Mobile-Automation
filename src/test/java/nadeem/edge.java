@@ -9,7 +9,7 @@ import drivers.AppiumServerManager;
 import drivers.DriverFactory;
 import utils.ReusableMethods;
 
-public class ios extends AppiumServerManager {
+public class edge extends AppiumServerManager {
 
 	@BeforeClass
 	public void reportTableStart() {

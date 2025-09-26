@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[<h3>Android Test Results</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
+    </line>
     <line>
       <![CDATA[<h3>Android Test Results</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
     </line>
@@ -8,70 +11,101 @@
       <![CDATA[<h3>Ios Test Results</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-09-24T11:34:07 IST" name="MoTradingAutomationSuite" finished-at="2025-09-24T11:34:16 IST" duration-ms="9297">
+  <suite started-at="2025-09-26T15:13:28 IST" name="MoTradingAutomationSuite" finished-at="2025-09-26T15:13:41 IST" duration-ms="12959">
     <groups>
     </groups>
-    <test started-at="2025-09-24T11:34:07 IST" name="AndroidTest" finished-at="2025-09-24T11:34:13 IST" duration-ms="6321">
-      <class name="nadeem.android">
-        <test-method is-config="true" signature="launchandroid()[pri:0, instance:nadeem.android@2ca923bb]" started-at="2025-09-24T11:34:07 IST" name="launchandroid" finished-at="2025-09-24T11:34:13 IST" duration-ms="6136" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchandroid -->
-        <test-method is-config="true" signature="reportTableStart()[pri:0, instance:nadeem.android@2ca923bb]" started-at="2025-09-24T11:34:13 IST" name="reportTableStart" finished-at="2025-09-24T11:34:13 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reportTableStart -->
-        <test-method signature="test1()[pri:1, instance:nadeem.android@2ca923bb]" started-at="2025-09-24T11:34:13 IST" name="test1" finished-at="2025-09-24T11:34:13 IST" duration-ms="43" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:2, instance:nadeem.android@2ca923bb]" started-at="2025-09-24T11:34:13 IST" name="test2" finished-at="2025-09-24T11:34:13 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method signature="Android()[pri:3, instance:nadeem.android@2ca923bb]" started-at="2025-09-24T11:34:13 IST" name="Android" finished-at="2025-09-24T11:34:13 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[<h3>Android Test Results</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Android -->
-        <test-method is-config="true" signature="reportTableEnd()[pri:0, instance:nadeem.android@2ca923bb]" started-at="2025-09-24T11:34:13 IST" name="reportTableEnd" finished-at="2025-09-24T11:34:13 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- reportTableEnd -->
-      </class> <!-- nadeem.android -->
-    </test> <!-- AndroidTest -->
-    <test started-at="2025-09-24T11:34:07 IST" name="BrowserStackIOSTest" finished-at="2025-09-24T11:34:16 IST" duration-ms="9297">
-      <class name="nadeem.ios">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:nadeem.ios@2a7ed1f]" started-at="2025-09-24T11:34:07 IST" name="beforeTest" finished-at="2025-09-24T11:34:16 IST" duration-ms="9255" status="PASS">
+    <test started-at="2025-09-26T15:13:28 IST" name="Edge" finished-at="2025-09-26T15:13:41 IST" duration-ms="12959">
+      <class name="nadeem.edge">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:nadeem.edge@5f0fd5a0]" started-at="2025-09-26T15:13:28 IST" name="beforeTest" finished-at="2025-09-26T15:13:41 IST" duration-ms="12860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="reportTableStart()[pri:0, instance:nadeem.ios@2a7ed1f]" started-at="2025-09-24T11:34:16 IST" name="reportTableStart" finished-at="2025-09-24T11:34:16 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="reportTableStart()[pri:0, instance:nadeem.edge@5f0fd5a0]" started-at="2025-09-26T15:13:41 IST" name="reportTableStart" finished-at="2025-09-26T15:13:41 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportTableStart -->
-        <test-method signature="test1()[pri:1, instance:nadeem.ios@2a7ed1f]" started-at="2025-09-24T11:34:16 IST" name="test1" finished-at="2025-09-24T11:34:16 IST" duration-ms="2" status="PASS">
+        <test-method signature="test1()[pri:1, instance:nadeem.edge@5f0fd5a0]" started-at="2025-09-26T15:13:41 IST" name="test1" finished-at="2025-09-26T15:13:41 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:2, instance:nadeem.ios@2a7ed1f]" started-at="2025-09-24T11:34:16 IST" name="test2" finished-at="2025-09-24T11:34:16 IST" duration-ms="2" status="PASS">
+        <test-method signature="test2()[pri:2, instance:nadeem.edge@5f0fd5a0]" started-at="2025-09-26T15:13:41 IST" name="test2" finished-at="2025-09-26T15:13:41 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method signature="Ios()[pri:3, instance:nadeem.ios@2a7ed1f]" started-at="2025-09-24T11:34:16 IST" name="Ios" finished-at="2025-09-24T11:34:16 IST" duration-ms="4" status="PASS">
+        <test-method signature="Ios()[pri:3, instance:nadeem.edge@5f0fd5a0]" started-at="2025-09-26T15:13:41 IST" name="Ios" finished-at="2025-09-26T15:13:41 IST" duration-ms="6" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<h3>Ios Test Results</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
             </line>
           </reporter-output>
         </test-method> <!-- Ios -->
-        <test-method is-config="true" signature="reportTableEnd()[pri:0, instance:nadeem.ios@2a7ed1f]" started-at="2025-09-24T11:34:16 IST" name="reportTableEnd" finished-at="2025-09-24T11:34:16 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="reportTableEnd()[pri:0, instance:nadeem.edge@5f0fd5a0]" started-at="2025-09-26T15:13:41 IST" name="reportTableEnd" finished-at="2025-09-26T15:13:41 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportTableEnd -->
-      </class> <!-- nadeem.ios -->
-    </test> <!-- BrowserStackIOSTest -->
+      </class> <!-- nadeem.edge -->
+    </test> <!-- Edge -->
+    <test started-at="2025-09-26T15:13:28 IST" name="ChromeII" finished-at="2025-09-26T15:13:40 IST" duration-ms="11704">
+      <class name="nadeem.chromeII">
+        <test-method is-config="true" signature="launchandroid()[pri:0, instance:nadeem.chromeII@4d6025c5]" started-at="2025-09-26T15:13:28 IST" name="launchandroid" finished-at="2025-09-26T15:13:40 IST" duration-ms="11425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchandroid -->
+        <test-method is-config="true" signature="reportTableStart()[pri:0, instance:nadeem.chromeII@4d6025c5]" started-at="2025-09-26T15:13:40 IST" name="reportTableStart" finished-at="2025-09-26T15:13:40 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportTableStart -->
+        <test-method signature="test1()[pri:1, instance:nadeem.chromeII@4d6025c5]" started-at="2025-09-26T15:13:40 IST" name="test1" finished-at="2025-09-26T15:13:40 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test2()[pri:2, instance:nadeem.chromeII@4d6025c5]" started-at="2025-09-26T15:13:40 IST" name="test2" finished-at="2025-09-26T15:13:40 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="Android()[pri:3, instance:nadeem.chromeII@4d6025c5]" started-at="2025-09-26T15:13:40 IST" name="Android" finished-at="2025-09-26T15:13:40 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Android Test Results</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Android -->
+        <test-method is-config="true" signature="reportTableEnd()[pri:0, instance:nadeem.chromeII@4d6025c5]" started-at="2025-09-26T15:13:40 IST" name="reportTableEnd" finished-at="2025-09-26T15:13:40 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportTableEnd -->
+      </class> <!-- nadeem.chromeII -->
+    </test> <!-- ChromeII -->
+    <test started-at="2025-09-26T15:13:28 IST" name="Chrome" finished-at="2025-09-26T15:13:41 IST" duration-ms="12843">
+      <class name="nadeem.chrome">
+        <test-method is-config="true" signature="launchandroid()[pri:0, instance:nadeem.chrome@2ca923bb]" started-at="2025-09-26T15:13:28 IST" name="launchandroid" finished-at="2025-09-26T15:13:41 IST" duration-ms="12695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchandroid -->
+        <test-method is-config="true" signature="reportTableStart()[pri:0, instance:nadeem.chrome@2ca923bb]" started-at="2025-09-26T15:13:41 IST" name="reportTableStart" finished-at="2025-09-26T15:13:41 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportTableStart -->
+        <test-method signature="test1()[pri:1, instance:nadeem.chrome@2ca923bb]" started-at="2025-09-26T15:13:41 IST" name="test1" finished-at="2025-09-26T15:13:41 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test2()[pri:2, instance:nadeem.chrome@2ca923bb]" started-at="2025-09-26T15:13:41 IST" name="test2" finished-at="2025-09-26T15:13:41 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="Android()[pri:3, instance:nadeem.chrome@2ca923bb]" started-at="2025-09-26T15:13:41 IST" name="Android" finished-at="2025-09-26T15:13:41 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>Android Test Results</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Android -->
+        <test-method is-config="true" signature="reportTableEnd()[pri:0, instance:nadeem.chrome@2ca923bb]" started-at="2025-09-26T15:13:41 IST" name="reportTableEnd" finished-at="2025-09-26T15:13:41 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportTableEnd -->
+      </class> <!-- nadeem.chrome -->
+    </test> <!-- Chrome -->
   </suite> <!-- MoTradingAutomationSuite -->
 </testng-results>

@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <suite name="MoTradingAutomationSuite" parallel="tests"
-	thread-count="2">
+	thread-count="3">
 
 	<listeners>
 		<listener class-name="utils.Listners" />
 	</listeners>
 
-	<!-- Android Local Test -->
-	<test name="AndroidTest">
+	<!-- chrome Test -->
+	<test name="Chrome">
 		<classes>
-			<class name="nadeem.android" />
+			<class name="nadeem.chrome" />
 		</classes>
 	</test>
 
-	<!-- BrowserStack iOS Test -->
-	<test name="BrowserStackIOSTest">
+	<!-- chromeII Test -->
+	<test name="ChromeII">
 		<classes>
-			<class name="nadeem.ios" />
+			<class name="nadeem.chromeII" />
+		</classes>
+	</test>
+
+	<!-- edge Test -->
+	<test name="Edge">
+		<classes>
+			<class name="nadeem.edge" />
 		</classes>
 	</test>
 
