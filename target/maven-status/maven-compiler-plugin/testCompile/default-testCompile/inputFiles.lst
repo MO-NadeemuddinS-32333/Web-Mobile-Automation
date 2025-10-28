@@ -1,13 +1,17 @@
-D:\Mo Trading Automation\newproject\src\test\java\drivers\AppiumServerManager.java
-D:\Mo Trading Automation\newproject\src\test\java\drivers\DriverFactory.java
-D:\Mo Trading Automation\newproject\src\test\java\nadeem\aademo.java
-D:\Mo Trading Automation\newproject\src\test\java\nadeem\demotest.java
-D:\Mo Trading Automation\newproject\src\test\java\nadeem\serverdrivertest.java
-D:\Mo Trading Automation\newproject\src\test\java\pageobjects\HomePage.java
-D:\Mo Trading Automation\newproject\src\test\java\pageobjects\LoginPage.java
-D:\Mo Trading Automation\newproject\src\test\java\stepDefs\GetQSD.java
-D:\Mo Trading Automation\newproject\src\test\java\stepDefs\GetSD.java
-D:\Mo Trading Automation\newproject\src\test\java\utils\Commons.java
-D:\Mo Trading Automation\newproject\src\test\java\utils\DataDriven.java
-D:\Mo Trading Automation\newproject\src\test\java\utils\Listners.java
-D:\Mo Trading Automation\newproject\src\test\java\utils\ReusableMethods.java
+D:\Myprojects\DriverFactory\src\test\java\drivers\AppiumServerManager.java
+D:\Myprojects\DriverFactory\src\test\java\drivers\DriverFactory.java
+D:\Myprojects\DriverFactory\src\test\java\nadeem\aademo.java
+D:\Myprojects\DriverFactory\src\test\java\nadeem\chrome.java
+D:\Myprojects\DriverFactory\src\test\java\nadeem\chromeII.java
+D:\Myprojects\DriverFactory\src\test\java\nadeem\demotest.java
+D:\Myprojects\DriverFactory\src\test\java\nadeem\edge.java
+D:\Myprojects\DriverFactory\src\test\java\nadeem\sample.java
+D:\Myprojects\DriverFactory\src\test\java\nadeem\serverdrivertest.java
+D:\Myprojects\DriverFactory\src\test\java\pageobjects\HomePage.java
+D:\Myprojects\DriverFactory\src\test\java\pageobjects\LoginPage.java
+D:\Myprojects\DriverFactory\src\test\java\stepDefs\GetQSD.java
+D:\Myprojects\DriverFactory\src\test\java\stepDefs\GetSD.java
+D:\Myprojects\DriverFactory\src\test\java\utils\Commons.java
+D:\Myprojects\DriverFactory\src\test\java\utils\DataDriven.java
+D:\Myprojects\DriverFactory\src\test\java\utils\Listners.java
+D:\Myprojects\DriverFactory\src\test\java\utils\ReusableMethods.java
