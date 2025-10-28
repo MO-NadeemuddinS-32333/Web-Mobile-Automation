@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="MoTradingAutomationSuite" parallel="tests"
+<suite name="TestNg Sample test suite" parallel="tests"
 	thread-count="3">
 
 	<listeners>

@@ -30,7 +30,7 @@ public class chromeII extends AppiumServerManager {
 
 	@Test(priority = 1)
 	public void test1() {
-		ReusableMethods.logTableStart("Android Test Results");
+		ReusableMethods.logTableStart("Test Results frome chrome II");
 		ReusableMethods.logTableRow("This is test 1", "Pass", 1000);
 	}
 

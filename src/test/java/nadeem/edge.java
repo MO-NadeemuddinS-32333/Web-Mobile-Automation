@@ -24,7 +24,7 @@ public class edge extends AppiumServerManager {
 
 	@Test(priority = 1)
 	public void test1() {
-		ReusableMethods.logTableStart("Ios Test Results");
+		ReusableMethods.logTableStart("Test Results for Edge");
 		ReusableMethods.logTableRow("This is test 1", "Pass", 1000);
 	}
 
