@@ -50,14 +50,14 @@ Update `config.properties` for your environment:
 ```properties
 # Web Testing
 platform=chrome
-url=https://invest.motilaloswal.com/
+url= ****************************************
 
 # Android Configuration
 androidVersion=13
 androidDevice=Pixel_6
 androidUdid=97957054
-Rise_app_package=com.mosl.mobile
-Rise_app_activity=com.mosl.mobile.MainActivity
+Rise_app_package=*************
+Rise_app_activity=****************
 ``
 
 ## 🏃♂️ Running Tests
@@ -212,5 +212,3 @@ newproject/
 4. Submit pull request with detailed description
 
 ---
-
-**Built for comprehensive Motilal Oswal trading platform automation**

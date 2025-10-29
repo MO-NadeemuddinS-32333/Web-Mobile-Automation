@@ -33,7 +33,6 @@ public class Listners implements ITestListener {
 	public static ExtentReports getReporterObject() {
 		String path = System.getProperty("user.dir") + "/reports/index.html";
 		String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path + timestamp);
 		reporter.config().setReportName("Automation Results");
 		reporter.config().setDocumentTitle("Test Results");
