@@ -1,5 +1,6 @@
 package nadeem;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -10,6 +11,8 @@ import drivers.DriverFactory;
 import utils.ReusableMethods;
 
 public class chrome extends AppiumServerManager {
+
+	String path = "C:\\Users\\nadeemuddinsayed\\Desktop\\DS, AI & ML\\New folder\\";
 
 	@BeforeClass
 	public void reportTableStart() {
@@ -30,19 +33,30 @@ public class chrome extends AppiumServerManager {
 
 	@Test(priority = 1)
 	public void test1() {
-		ReusableMethods.logTableStart("Android Test Results");
-		ReusableMethods.logTableRow("This is test 1", "Pass", 1000);
+		ReusableMethods.logTableStart("chrome");
+		ReusableMethods.logTableRow(path, "This is test 1", "Pass", 1000);
 	}
 
 	@Test(priority = 2)
 	public void test2() {
-		ReusableMethods.logTableRow("This is test 2", "Pass", 1000);
+		ReusableMethods.logTableRow(path, "This is test 2", "Pass", 1000);
 	}
 
 	@Test(priority = 3)
 	public void Android() {
-		ReusableMethods.logTableRow("This is test 3", "Fail", 1000);
-		ReusableMethods.logTableEnd();
+		String status = null;
+		try {
+			DriverFactory.getDriver().findElement(By.xpath("//a[@class='btn mt-2 btn-primary w-auto hide-mobile mt0']"))
+					.click();
+			status = "Pass";
+		} catch (Exception e) {
+			status = "Fail";
+			System.out.println("Exception occurred while logging table row: " + e.getMessage());
+		} finally {
+			ReusableMethods.logTableRow(path, "This is test 3", status, 1000);
+			ReusableMethods.logTableEnd();
+		}
+
 	}
 
 	@AfterClass

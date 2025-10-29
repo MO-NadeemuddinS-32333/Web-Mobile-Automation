@@ -160,24 +160,34 @@ public class ReusableMethods {
 		rowCounter.set(0);
 		tableContent.set(new StringBuilder());
 		tableContent.get().append("<h3>").append(tableName).append("</h3>");
-		tableContent.get().append("<table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'>");
+		tableContent.get()
+				.append("<table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'>");
 		tableContent.get().append("<tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr>");
 	}
 
-	public static void logTableRow(String testCase, String status, long timeTaken) {
+	public static void logTableRow(String path, String testCase, String status, long timeTaken) {
 		int currentCount = rowCounter.get() + 1;
 		rowCounter.set(currentCount);
 		String statusColor = "";
 		String statusTextStyle = "color: white; font-weight: bold;";
 		if ("Fail".equalsIgnoreCase(status)) {
 			statusColor = "background-color: red;";
+			try {
+				File screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
+				String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+				String filePath = path + testCase + "_" + timestamp + ".png";
+				FileUtils.copyFile(screenshot, new File(filePath));
+				System.out.println("Screenshot saved: " + filePath);
+			} catch (IOException e) {
+				System.out.println("Failed to capture screenshot: " + e.getMessage());
+			}
+
 		} else if ("Pass".equalsIgnoreCase(status)) {
 			statusColor = "background-color: green;";
 		}
-		tableContent.get().append("<tr><td>").append(currentCount).append("</td><td>")
-			.append(testCase).append("</td><td style='").append(statusColor)
-			.append(statusTextStyle).append("'>").append(status)
-			.append("</td><td>").append(timeTaken).append("</td></tr>");
+		tableContent.get().append("<tr><td>").append(currentCount).append("</td><td>").append(testCase)
+				.append("</td><td style='").append(statusColor).append(statusTextStyle).append("'>").append(status)
+				.append("</td><td>").append(timeTaken).append("</td></tr>");
 	}
 
 	public static void logTableEnd() {

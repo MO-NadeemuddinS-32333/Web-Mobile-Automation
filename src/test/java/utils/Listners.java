@@ -63,16 +63,13 @@ public class Listners implements ITestListener {
 				folder.mkdirs();
 
 			String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-			String screenshotFile = folderPath + result.getMethod().getMethodName() + "_" + timestamp + ".jpeg";
-
+			String screenshotFile = folderPath + result.getMethod().getMethodName() + "_" + timestamp + ".png";
 			File screenshot = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screenshot, new File(screenshotFile));
 			System.out.println("Screenshot saved: " + screenshotFile);
-
 			// Attach screenshot to Extent report
 			test.get().fail(result.getThrowable(),
 					MediaEntityBuilder.createScreenCaptureFromPath(screenshotFile).build());
-
 		} catch (IOException e) {
 			test.get().fail("Failed to capture screenshot: " + e.getMessage());
 			System.out.println("Failed to capture screenshot: " + e.getMessage());
