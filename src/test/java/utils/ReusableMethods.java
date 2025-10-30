@@ -1,7 +1,11 @@
 package utils;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Arrays;
@@ -9,6 +13,10 @@ import java.util.Collections;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -188,10 +196,63 @@ public class ReusableMethods {
 		tableContent.get().append("<tr><td>").append(currentCount).append("</td><td>").append(testCase)
 				.append("</td><td style='").append(statusColor).append(statusTextStyle).append("'>").append(status)
 				.append("</td><td>").append(timeTaken).append("</td></tr>");
+
+		writeToExcel(path, testCase, status, timeTaken);
+
 	}
 
 	public static void logTableEnd() {
 		tableContent.get().append("</table>");
 		Reporter.log(tableContent.get().toString(), true);
 	}
+
+	public static synchronized void writeToExcel(String path, String testCase, String status, long timeTaken) {
+		try {
+			// Create file if not exists
+			String filePath = path + "Execution_Report.xlsx";
+			Workbook workbook;
+			Sheet sheet;
+
+			if (Files.exists(Paths.get(filePath))) {
+				FileInputStream fis = new FileInputStream(filePath);
+				workbook = new XSSFWorkbook(fis);
+				sheet = workbook.getSheetAt(0);
+				fis.close();
+			} else {
+				workbook = new XSSFWorkbook();
+				sheet = workbook.createSheet("Test Results");
+
+				// Create header row
+				Row headerRow = sheet.createRow(0);
+				headerRow.createCell(0).setCellValue("Date & Time");
+				headerRow.createCell(1).setCellValue("Test Case");
+				headerRow.createCell(2).setCellValue("Status");
+				headerRow.createCell(3).setCellValue("Time Taken (ms)");
+			}
+
+			// Get the last row
+			int lastRowNum = sheet.getLastRowNum();
+			Row newRow = sheet.createRow(lastRowNum + 1);
+
+			// Add data
+			String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+			newRow.createCell(0).setCellValue(timestamp);
+			newRow.createCell(1).setCellValue(testCase);
+			newRow.createCell(2).setCellValue(status);
+			newRow.createCell(3).setCellValue(timeTaken);
+
+			// Write and close
+			FileOutputStream fos = new FileOutputStream(filePath);
+			workbook.write(fos);
+			fos.close();
+			workbook.close();
+
+			System.out.println("Test case result saved at: " + filePath);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Failed to save test case result: " + e.getMessage());
+		}
+	}
+
 }

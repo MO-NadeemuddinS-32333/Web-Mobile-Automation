@@ -32,7 +32,7 @@ public class chromeII extends AppiumServerManager {
 	@Test(priority = 1)
 	public void test1() {
 		ReusableMethods.logTableStart("Module2");
-		ReusableMethods.logTableRow(path, "This is test 1", "Pass", 1000);
+		ReusableMethods.logTableRow(path, "This is test 1", "Fail", 1000);
 	}
 
 	@Test(priority = 2)

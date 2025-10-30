@@ -55,6 +55,7 @@ public class chrome extends AppiumServerManager {
 		} finally {
 			ReusableMethods.logTableRow(path, "This is test 3", status, 1000);
 			ReusableMethods.logTableEnd();
+
 		}
 
 	}

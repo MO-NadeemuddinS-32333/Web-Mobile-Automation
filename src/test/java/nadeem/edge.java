@@ -31,7 +31,7 @@ public class edge extends AppiumServerManager {
 
 	@Test(priority = 2)
 	public void test2() {
-		ReusableMethods.logTableRow(path, "This is test 2", "Pass", 1000);
+		ReusableMethods.logTableRow(path, "This is test 2", "Fail", 1000);
 	}
 
 	@Test(priority = 3)
