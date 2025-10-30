@@ -17,12 +17,16 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
@@ -253,6 +257,27 @@ public class ReusableMethods {
 			e.printStackTrace();
 			System.out.println("Failed to save test case result: " + e.getMessage());
 		}
+	}
+
+	public static void WebscrollToElement(WebDriver driver, WebElement element) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	public static void WebscrollByPixels(WebDriver driver, int x, int y) {
+		((JavascriptExecutor) driver).executeScript("window.scrollBy(" + x + ", " + y + ");");
+	}
+
+	public static void selectDropdownByVisibleText(WebElement element, String text) {
+		Select select = new Select(element);
+		select.selectByVisibleText(text);
+	}
+
+	public static void hoverOverElement(WebDriver driver, WebElement element) {
+		new Actions(driver).moveToElement(element).perform();
+	}
+
+	public static void doubleClick(WebDriver driver, WebElement element) {
+		new Actions(driver).doubleClick(element).perform();
 	}
 
 }

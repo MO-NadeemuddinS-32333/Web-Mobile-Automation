@@ -3,16 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="nadeem.edge">
+      <class name="nadeem.chrome">
         <methods>
-          <include name="reportTableEnd"/>
-          <include name="beforeTest"/>
-          <include name="reportTableStart"/>
-          <include name="Ios"/>
+          <include name="launchandroid"/>
           <include name="test1"/>
-          <include name="test2"/>
         </methods>
-      </class> <!-- nadeem.edge -->
+      </class> <!-- nadeem.chrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

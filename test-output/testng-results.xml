@@ -1,43 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="6" failed="0" skipped="3">
   <reporter-output>
     <line>
       <![CDATA[<h3>Module2</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
     </line>
+    <line>
+      <![CDATA[<h3>chrome</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-10-30T11:47:10 IST" name="Default suite" finished-at="2025-10-30T11:47:21 IST" duration-ms="10973">
+  <suite started-at="2025-10-30T17:24:50 IST" name="TestNg Sample test suite" finished-at="2025-10-30T17:25:18 IST" duration-ms="27914">
     <groups>
     </groups>
-    <test started-at="2025-10-30T11:47:10 IST" name="Default test" finished-at="2025-10-30T11:47:21 IST" duration-ms="10973">
-      <class name="nadeem.chromeII">
-        <test-method is-config="true" signature="launchandroid()[pri:0, instance:nadeem.chromeII@79d8407f]" started-at="2025-10-30T11:47:10 IST" name="launchandroid" finished-at="2025-10-30T11:47:18 IST" duration-ms="7714" status="PASS">
+    <test started-at="2025-10-30T17:24:50 IST" name="Edge" finished-at="2025-10-30T17:24:51 IST" duration-ms="1214">
+      <class name="nadeem.edge">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:nadeem.edge@5f0fd5a0]" started-at="2025-10-30T17:24:50 IST" name="beforeTest" finished-at="2025-10-30T17:24:51 IST" duration-ms="1113" status="FAIL">
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[msedgedriver located at D:/Myprojects/DriverFactory/web drivers/msedgedriver.exe, but invalid
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: EdgeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: msedgedriver located at D:/Myprojects/DriverFactory/web drivers/msedgedriver.exe, but invalid
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: EdgeDriver
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:45)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
+at org.openqa.selenium.edge.EdgeDriver.generateExecutor(EdgeDriver.java:71)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:60)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:56)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:48)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:44)
+at drivers.DriverFactory.initEdge(DriverFactory.java:218)
+at drivers.DriverFactory.initDriver(DriverFactory.java:77)
+at nadeem.edge.beforeTest(edge.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+at org.testng.TestRunner.beforeRun(TestRunner.java:644)
+at org.testng.TestRunner.run(TestRunner.java:610)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchandroid -->
-        <test-method is-config="true" signature="reportTableStart()[pri:0, instance:nadeem.chromeII@79d8407f]" started-at="2025-10-30T11:47:18 IST" name="reportTableStart" finished-at="2025-10-30T11:47:18 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="reportTableStart()[pri:0, instance:nadeem.edge@5f0fd5a0]" started-at="2025-10-30T17:24:51 IST" name="reportTableStart" finished-at="2025-10-30T17:24:51 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportTableStart -->
-        <test-method signature="test1()[pri:1, instance:nadeem.chromeII@79d8407f]" started-at="2025-10-30T11:47:18 IST" name="test1" finished-at="2025-10-30T11:47:21 IST" duration-ms="2553" status="PASS">
+        <test-method signature="test1()[pri:1, instance:nadeem.edge@5f0fd5a0]" started-at="2025-10-30T17:24:51 IST" name="test1" finished-at="2025-10-30T17:24:51 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[msedgedriver located at D:/Myprojects/DriverFactory/web drivers/msedgedriver.exe, but invalid
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: EdgeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: msedgedriver located at D:/Myprojects/DriverFactory/web drivers/msedgedriver.exe, but invalid
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: EdgeDriver
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:45)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
+at org.openqa.selenium.edge.EdgeDriver.generateExecutor(EdgeDriver.java:71)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:60)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:56)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:48)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:44)
+at drivers.DriverFactory.initEdge(DriverFactory.java:218)
+at drivers.DriverFactory.initDriver(DriverFactory.java:77)
+at nadeem.edge.beforeTest(edge.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+at org.testng.TestRunner.beforeRun(TestRunner.java:644)
+at org.testng.TestRunner.run(TestRunner.java:610)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:2, instance:nadeem.chromeII@79d8407f]" started-at="2025-10-30T11:47:21 IST" name="test2" finished-at="2025-10-30T11:47:21 IST" duration-ms="148" status="PASS">
+        <test-method signature="test2()[pri:2, instance:nadeem.edge@5f0fd5a0]" started-at="2025-10-30T17:24:51 IST" name="test2" finished-at="2025-10-30T17:24:51 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[msedgedriver located at D:/Myprojects/DriverFactory/web drivers/msedgedriver.exe, but invalid
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: EdgeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: msedgedriver located at D:/Myprojects/DriverFactory/web drivers/msedgedriver.exe, but invalid
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: EdgeDriver
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:45)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
+at org.openqa.selenium.edge.EdgeDriver.generateExecutor(EdgeDriver.java:71)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:60)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:56)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:48)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:44)
+at drivers.DriverFactory.initEdge(DriverFactory.java:218)
+at drivers.DriverFactory.initDriver(DriverFactory.java:77)
+at nadeem.edge.beforeTest(edge.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+at org.testng.TestRunner.beforeRun(TestRunner.java:644)
+at org.testng.TestRunner.run(TestRunner.java:610)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method signature="Android()[pri:3, instance:nadeem.chromeII@79d8407f]" started-at="2025-10-30T11:47:21 IST" name="Android" finished-at="2025-10-30T11:47:21 IST" duration-ms="448" status="PASS">
+        <test-method signature="Ios()[pri:3, instance:nadeem.edge@5f0fd5a0]" started-at="2025-10-30T17:24:51 IST" name="Ios" finished-at="2025-10-30T17:24:51 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[msedgedriver located at D:/Myprojects/DriverFactory/web drivers/msedgedriver.exe, but invalid
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: EdgeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: msedgedriver located at D:/Myprojects/DriverFactory/web drivers/msedgedriver.exe, but invalid
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: EdgeDriver
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:45)
+at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
+at org.openqa.selenium.edge.EdgeDriver.generateExecutor(EdgeDriver.java:71)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:60)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:56)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:48)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:44)
+at drivers.DriverFactory.initEdge(DriverFactory.java:218)
+at drivers.DriverFactory.initDriver(DriverFactory.java:77)
+at nadeem.edge.beforeTest(edge.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+at org.testng.TestRunner.beforeRun(TestRunner.java:644)
+at org.testng.TestRunner.run(TestRunner.java:610)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Ios -->
+        <test-method is-config="true" signature="reportTableEnd()[pri:0, instance:nadeem.edge@5f0fd5a0]" started-at="2025-10-30T17:24:51 IST" name="reportTableEnd" finished-at="2025-10-30T17:24:51 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportTableEnd -->
+      </class> <!-- nadeem.edge -->
+    </test> <!-- Edge -->
+    <test started-at="2025-10-30T17:24:50 IST" name="ChromeII" finished-at="2025-10-30T17:25:03 IST" duration-ms="13000">
+      <class name="nadeem.chromeII">
+        <test-method is-config="true" signature="launchandroid()[pri:0, instance:nadeem.chromeII@407a7f2a]" started-at="2025-10-30T17:24:50 IST" name="launchandroid" finished-at="2025-10-30T17:24:58 IST" duration-ms="7887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchandroid -->
+        <test-method is-config="true" signature="reportTableStart()[pri:0, instance:nadeem.chromeII@407a7f2a]" started-at="2025-10-30T17:24:58 IST" name="reportTableStart" finished-at="2025-10-30T17:24:58 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportTableStart -->
+        <test-method signature="test1()[pri:1, instance:nadeem.chromeII@407a7f2a]" started-at="2025-10-30T17:24:58 IST" name="test1" finished-at="2025-10-30T17:25:01 IST" duration-ms="3831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test2()[pri:2, instance:nadeem.chromeII@407a7f2a]" started-at="2025-10-30T17:25:01 IST" name="test2" finished-at="2025-10-30T17:25:02 IST" duration-ms="523" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="Android()[pri:3, instance:nadeem.chromeII@407a7f2a]" started-at="2025-10-30T17:25:02 IST" name="Android" finished-at="2025-10-30T17:25:03 IST" duration-ms="694" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<h3>Module2</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
             </line>
           </reporter-output>
         </test-method> <!-- Android -->
-        <test-method is-config="true" signature="reportTableEnd()[pri:0, instance:nadeem.chromeII@79d8407f]" started-at="2025-10-30T11:47:21 IST" name="reportTableEnd" finished-at="2025-10-30T11:47:21 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="reportTableEnd()[pri:0, instance:nadeem.chromeII@407a7f2a]" started-at="2025-10-30T17:25:03 IST" name="reportTableEnd" finished-at="2025-10-30T17:25:03 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportTableEnd -->
       </class> <!-- nadeem.chromeII -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- ChromeII -->
+    <test started-at="2025-10-30T17:24:50 IST" name="Chrome" finished-at="2025-10-30T17:25:18 IST" duration-ms="27914">
+      <class name="nadeem.chrome">
+        <test-method is-config="true" signature="launchandroid()[pri:0, instance:nadeem.chrome@2ca26d77]" started-at="2025-10-30T17:24:50 IST" name="launchandroid" finished-at="2025-10-30T17:24:58 IST" duration-ms="7970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchandroid -->
+        <test-method signature="test1()[pri:1, instance:nadeem.chrome@2ca26d77]" started-at="2025-10-30T17:24:58 IST" name="test1" finished-at="2025-10-30T17:25:01 IST" duration-ms="3385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test2()[pri:2, instance:nadeem.chrome@2ca26d77]" started-at="2025-10-30T17:25:01 IST" name="test2" finished-at="2025-10-30T17:25:02 IST" duration-ms="261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="Android()[pri:3, instance:nadeem.chrome@2ca26d77]" started-at="2025-10-30T17:25:02 IST" name="Android" finished-at="2025-10-30T17:25:18 IST" duration-ms="16001" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<h3>chrome</h3><table border='1' style='border-collapse: collapse; width: 75%; text-align: center;'><tr><th>Sr. No</th><th>Test Case</th><th>Status</th><th>Time Taken (ms)</th></tr><tr><td>1</td><td>This is test 1</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>2</td><td>This is test 2</td><td style='background-color: green;color: white; font-weight: bold;'>Pass</td><td>1000</td></tr><tr><td>3</td><td>This is test 3</td><td style='background-color: red;color: white; font-weight: bold;'>Fail</td><td>1000</td></tr></table>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Android -->
+      </class> <!-- nadeem.chrome -->
+    </test> <!-- Chrome -->
+  </suite> <!-- TestNg Sample test suite -->
 </testng-results>

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="3" parallel="tests" name="Failed suite [TestNg Sample test suite]">
+  <listeners>
+    <listener class-name="utils.Listners"/>
+  </listeners>
+  <test thread-count="3" parallel="tests" name="Edge(failed)">
     <classes>
       <class name="nadeem.edge">
         <methods>
-          <include name="reportTableEnd"/>
           <include name="beforeTest"/>
+          <include name="reportTableEnd"/>
           <include name="reportTableStart"/>
           <include name="Ios"/>
           <include name="test1"/>
@@ -14,5 +17,5 @@
         </methods>
       </class> <!-- nadeem.edge -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Edge(failed) -->
+</suite> <!-- Failed suite [TestNg Sample test suite] -->

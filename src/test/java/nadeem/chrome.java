@@ -1,8 +1,6 @@
 package nadeem;
 
 import org.openqa.selenium.By;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -13,11 +11,6 @@ import utils.ReusableMethods;
 public class chrome extends AppiumServerManager {
 
 	String path = "C:\\Users\\nadeemuddinsayed\\Desktop\\DS, AI & ML\\New folder\\";
-
-	@BeforeClass
-	public void reportTableStart() {
-
-	}
 
 	@BeforeTest
 	public void launchandroid() {
@@ -32,8 +25,11 @@ public class chrome extends AppiumServerManager {
 	}
 
 	@Test(priority = 1)
-	public void test1() {
+	public void test1() throws InterruptedException {
 		ReusableMethods.logTableStart("chrome");
+
+		
+		System.out.println("Scrolled to Furniture Deals section");
 		ReusableMethods.logTableRow(path, "This is test 1", "Pass", 1000);
 	}
 
@@ -55,14 +51,7 @@ public class chrome extends AppiumServerManager {
 		} finally {
 			ReusableMethods.logTableRow(path, "This is test 3", status, 1000);
 			ReusableMethods.logTableEnd();
-
 		}
-
-	}
-
-	@AfterClass
-	public void reportTableEnd() {
-
 	}
 
 }
