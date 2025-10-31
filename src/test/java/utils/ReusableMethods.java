@@ -278,17 +278,50 @@ public class ReusableMethods {
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(" + x + ", " + y + ");");
 	}
 
-	public static void selectDropdownByVisibleText(WebElement element, String text) {
+	public static void WebselectDropdownByVisibleText(WebElement element, String text) {
 		Select select = new Select(element);
 		select.selectByVisibleText(text);
 	}
 
-	public static void hoverOverElement(WebDriver driver, WebElement element) {
+	public static void WebhoverOverElement(WebDriver driver, WebElement element) {
 		new Actions(driver).moveToElement(element).perform();
 	}
 
-	public static void doubleClick(WebDriver driver, WebElement element) {
+	public static void WebdoubleClick(WebDriver driver, WebElement element) {
 		new Actions(driver).doubleClick(element).perform();
+	}
+
+	public static void WebrightClickElement(WebDriver driver, WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.contextClick(element).perform();
+	}
+
+	public static void WebSwitchToFrame(WebDriver driver, WebElement frameElement) {
+		driver.switchTo().frame(frameElement);
+	}
+
+	public static void WebSwitchToDefaultContent(WebDriver driver) {
+		driver.switchTo().defaultContent();
+	}
+
+	public static void WebSwitchToWindowByTitle(WebDriver driver, String title) {
+		for (String handle : driver.getWindowHandles()) {
+			driver.switchTo().window(handle);
+			if (driver.getTitle().contains(title)) {
+				break;
+			}
+		}
+	}
+
+	public static void WebCloseNewWindowAndReturn(WebDriver driver, String mainWindowHandle) {
+		for (String handle : driver.getWindowHandles()) {
+			if (!handle.equals(mainWindowHandle)) {
+				driver.switchTo().window(handle);
+				driver.close();
+				break;
+			}
+		}
+		driver.switchTo().window(mainWindowHandle);
 	}
 
 }

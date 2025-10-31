@@ -47,7 +47,7 @@ public class chrome extends AppiumServerManager {
 	@Test(priority = 3)
 	public void mousehoverelement() {
 		LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
-		ReusableMethods.hoverOverElement(DriverFactory.getDriver(), loginpage.templeate);
+		ReusableMethods.WebhoverOverElement(DriverFactory.getDriver(), loginpage.templeate);
 		ReusableMethods.verifyElementAndLog(loginpage.templeate, path, "usermousehover on element");
 		ReusableMethods.logTableEnd();
 	}
