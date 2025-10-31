@@ -250,12 +250,23 @@ public class ReusableMethods {
 			workbook.write(fos);
 			fos.close();
 			workbook.close();
-
-			System.out.println("Test case result saved at: " + filePath);
-
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Failed to save test case result: " + e.getMessage());
+		}
+	}
+
+	public static void verifyElementAndLog(WebElement element, String path, String testCaseName) {
+		String status = null;
+		long startTime = System.currentTimeMillis();
+		try {
+			element.isDisplayed();
+			status = "Pass";
+		} catch (Exception e) {
+			status = "Fail";
+		} finally {
+			long endTime = System.currentTimeMillis();
+			long timeTaken = endTime - startTime;
+			logTableRow(path, testCaseName, status, timeTaken);
 		}
 	}
 

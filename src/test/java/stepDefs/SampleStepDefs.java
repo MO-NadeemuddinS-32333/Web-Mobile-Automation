@@ -13,9 +13,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobjects.HomePage;
-import pageobjects.LoginPage;
 
-public class GetSD extends AppiumServerManager {
+public class SampleStepDefs extends AppiumServerManager {
 	WebDriver driver;
 	HomePage homepage;
 
@@ -28,33 +27,7 @@ public class GetSD extends AppiumServerManager {
 
 	@Given("user login")
 	public void user_login() throws InterruptedException {
-		LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
 		try {
-			if (loginpage.loginButton.isDisplayed()) {
-
-				loginpage.loginButton.click();
-				Thread.sleep(1000);
-				loginpage.userID.click();
-				loginpage.userID.sendKeys("Y05120");
-				hideKeyboard(driver);
-				loginpage.nextbutton.click();
-				Thread.sleep(3000);
-				loginpage.passwordTextField.click();
-				loginpage.passwordTextField.sendKeys("Mofsl@321");
-				hideKeyboard(driver);
-				loginpage.loginButton.click();
-				Thread.sleep(5000);
-				loginpage.dobTextField.get(0).click();
-				loginpage.dobTextField.get(0).sendKeys("18052005 ");
-				hideKeyboard(driver);
-				loginpage.confirmDobButton.click();
-				Thread.sleep(3000);
-				loginpage.exploreTheAppButton.click();
-				Thread.sleep(5000);
-				loginpage.iUnderstandRddButton.click();
-				Thread.sleep(3000);
-
-			}
 		} catch (Exception biometricLoginException) {
 			System.out.println("Login failed");
 		}

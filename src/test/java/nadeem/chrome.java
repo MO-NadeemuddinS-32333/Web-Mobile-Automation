@@ -1,11 +1,15 @@
 package nadeem;
 
-import org.openqa.selenium.By;
+import java.io.IOException;
+
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import drivers.AppiumServerManager;
 import drivers.DriverFactory;
+import pageobjects.LoginPage;
+import utils.Commons;
 import utils.ReusableMethods;
 
 public class chrome extends AppiumServerManager {
@@ -13,11 +17,10 @@ public class chrome extends AppiumServerManager {
 	String path = "C:\\Users\\nadeemuddinsayed\\Desktop\\DS, AI & ML\\New folder\\";
 
 	@BeforeTest
-	public void launchandroid() {
+	public void BrowserLaunch() {
 		try {
 			DriverFactory.initDriver("chrome");
 			DriverFactory.getDriver();
-			System.out.println("Android driver initialized successfully");
 		} catch (Exception e) {
 			System.err.println("Failed to initialize Android driver: " + e.getMessage());
 			throw new RuntimeException("Android setup failed", e);
@@ -25,33 +28,33 @@ public class chrome extends AppiumServerManager {
 	}
 
 	@Test(priority = 1)
-	public void test1() throws InterruptedException {
+	public void login() throws InterruptedException, IOException {
 		ReusableMethods.logTableStart("chrome");
-
-		
-		System.out.println("Scrolled to Furniture Deals section");
-		ReusableMethods.logTableRow(path, "This is test 1", "Pass", 1000);
+		LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
+		loginpage.userID.sendKeys(Commons.getGlobalPropertiesValue("userid"));
+		loginpage.password.sendKeys(Commons.getGlobalPropertiesValue("password"));
+		loginpage.loginbutton.click();
+		ReusableMethods.verifyElementAndLog(loginpage.acme, path, "user login");
 	}
 
 	@Test(priority = 2)
-	public void test2() {
-		ReusableMethods.logTableRow(path, "This is test 2", "Pass", 1000);
+	public void scroll() {
+		LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
+		ReusableMethods.WebscrollByPixels(DriverFactory.getDriver(), 0, 1500);
+		ReusableMethods.verifyElementAndLog(loginpage.templeate, path, "User is able to scroll");
 	}
 
 	@Test(priority = 3)
-	public void Android() {
-		String status = null;
-		try {
-			DriverFactory.getDriver().findElement(By.xpath("//a[@class='btn mt-2 btn-primary w-auto hide-mobile mt0']"))
-					.click();
-			status = "Pass";
-		} catch (Exception e) {
-			status = "Fail";
-			System.out.println("Exception occurred while logging table row: " + e.getMessage());
-		} finally {
-			ReusableMethods.logTableRow(path, "This is test 3", status, 1000);
-			ReusableMethods.logTableEnd();
-		}
+	public void mousehoverelement() {
+		LoginPage loginpage = new LoginPage(DriverFactory.getDriver());
+		ReusableMethods.hoverOverElement(DriverFactory.getDriver(), loginpage.templeate);
+		ReusableMethods.verifyElementAndLog(loginpage.templeate, path, "usermousehover on element");
+		ReusableMethods.logTableEnd();
+	}
+
+	@AfterTest
+	public void endtest() {
+		DriverFactory.quitDriver();
 	}
 
 }

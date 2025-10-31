@@ -9,5 +9,5 @@ import io.cucumber.testng.CucumberOptions;
     monochrome = true,
     plugin = { "pretty", "html:target/HtmlReports.html" }
 )
-public class GetQSD extends AbstractTestNGCucumberTests {
+public class TestRunner extends AbstractTestNGCucumberTests {
 }
